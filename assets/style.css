@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --primary-color: white;
+  --secondary-color: black;
+  --bg-primary-color: #333;
+  --bg-secondary-color: #2690d4;
+  --contentEm: 25em;
+}
+
+body {
+  font-size: 1.1em;
+  line-height: 1.5;
+  color: var(--primary-color);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+p {
+  padding: 22px 0px;
+}
+
+h1 {
+  padding: 100px 0px 0px;
+}
+
+h2 {
+  padding: 33px 0px;
+}
+
+h3 {
+  padding: 26px 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header a {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 22px 44px;
+  color: var(--primary-color);
+  font-size: 1em;
+  text-transform: capitalize;
+  margin: 11px 0px;
+  background-color: var(--bg-primary-color);
+}
+#header a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 450px 3fr 1fr;
+}
+
+.gridColumns {
+  grid-template-columns: 1fr repeat(2, minmax(auto, var(--contentEm))) 1fr;
+}
+
+#header {
+  background-image: url(https://static.pexels.com/photos/248515/pexels-photo-248515.png);
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  opacity: 0.8;
+
+  display: grid;
+}
+
+#headerContenet {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+#main {
+  display: grid;
+  grid-template-rows: 1fr 2.5fr 1fr;
+  color: var(--secondary-color);
+}
+
+#text1 {
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+#text1 p {
+  columns: 2;
+  column-gap: 2em;
+}
+
+#items {
+  grid-area: 2 / 1 / 3 / 5;
+  display: grid;
+  background-color: var(--bg-primary-color);
+}
+
+#itemsContainer {
+  grid-area: 1 / 2 / 2 / 4;
+  display: flex;
+  justify-content: space-between;
+  padding: 44px 22px 22px;
+}
+
+.item {
+  width: 31%;
+  background-color: var(--primary-color);
+  display: grid;
+}
+
+.itemImg {
+  height: auto;
+  width: 100%;
+}
+
+.itemImg > img {
+  height: inherit;
+  width: inherit;
+}
+
+.itemTxt {
+  align-items: center;
+}
+
+#text2 {
+  grid-area: 3 / 2 / 4 / 4;
+  padding: 44px;
+}
+
+#footer {
+  display: grid;
+  grid-template-rows: 1fr 100px;
+}
+
+#contact {
+  grid-area: 1 / 1 / 2 / 3;
+  background-color: var(--bg-secondary-color);
+  padding: 44px;
+}
+
+#about {
+  grid-area: 1 / 3 / 2 / 5;
+  background-color: var(--bg-primary-color);
+  padding: 44px;
+}
+
+#acme {
+  grid-area: 2 / 1 / 3 / 3;
+  background-color: black;
+}
+
+#project {
+  grid-area: 2 / 3 / 3 / 5;
+  background-color: black;
+}
+
+#footer a {
+  color: var(--bg-secondary-color);
+}
